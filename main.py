@@ -271,6 +271,7 @@ def anal_callback(pat):
     cap.release()
 
     cv2.destroyAllWindows()
+    # 바꾸었어요
     
     # 기존 running 함수 (환자 분석 화면)
     grade = check(pat.get_cate(), min(max_l_shoulder_angle, max_r_shoulder_angle))  # check, get_grade 함수 정의 필요
