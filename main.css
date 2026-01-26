@@ -1,0 +1,60 @@
+:root {
+    --my_color-1: #0528F2;      
+    --my_color-2: #056CF2;      
+    --my_color-3: #B4C4D9;      
+    --my_color-4: #EBEEF2;      
+    --my_color-5: #3D9DF2;      
+}
+.title { 
+    color: var(--my_color-1) !important; 
+    font-size: 3rem !important;
+    font-weight: bold !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;        
+}
+.color-1 { 
+    color: var(--my_color-1) !important; 
+}
+.color-2 { 
+    color: var(--my_color-2) !important; 
+}
+.color-3 { 
+    color: var(--my_color-3) !important; 
+}
+.color-4 { 
+    color: var(--my_color-4) !important; 
+}
+.color-5 { 
+    color: var(--my_color-5) !important; 
+}
+.border-color-1 { 
+    border-color: var(--my_color-1) !important; 
+}         
+.stand_table {
+    color: black !important; 
+    font-size: 1rem !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;        
+}
+table, th, td {
+    border:1px solid var(--my_color-1);
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+/* 표의 첫 번째 행 선택 */
+tr:first-child {
+  background-color: var(--my_color-5); /* 연한 하늘색 */
+  color: var(--my_color-4);
+}
+#Caution {
+    background-color: #FFE9E9 !important;
+    font-weight: bold;
+}
+#Improve {
+    background-color: #E8F2FF !important;
+    font-weight: bold;
+}
+#Good {
+    background-color: #E8F9EE !important;
+    font-weight: bold;
+}
