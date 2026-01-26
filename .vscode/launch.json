@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run src.main",
+            "request": "launch",
+            "type": "debugpy",
+            // "program": "${file}",  // 현재 파일 실행 
+            "module": "src.main", // python -m src.test 실행
+            "cwd": "${workspaceFolder}", // 현재 경로 = project 루트
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/lib" // lib 폴더 참조 추가
+            }
+        }
+    ]
+}
