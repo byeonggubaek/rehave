@@ -1,0 +1,42 @@
+#1. python이 설치되어 있지 않다면 python 3.12버전 설치 
+
+#2. visual studio code가 설치되어 있지 않다면 visual studio code 설치 
+
+#3. Korean Language Pack for Visual Studio Code 확장 설치
+
+#4. Python 확장 설치 - Micsofot  
+
+#5. git가 설치되어 있지 않다면 git 설치 
+
+Visual Studio Code 실행후 다음 절차 실행 
+#6. 기본 터미널 프로필 선택
+Ctrl+Shift+P → "Terminal: Select Default Profile" 검색 → Git Bash 선택.
+
+#7. 터미널의 열어서 에러가 나면 
+Ctrl+, → terminal.integrated.env.windows 검색 → settings.json 편집:
+{
+  "terminal.integrated.env.windows": {
+    "VSCODE_ENV_REPLACE": null,
+    "VSCODE_ENV_PREPEND": null
+  },
+  "terminal.integrated.inheritEnv": true
+}
+Visual Code 재실행후 새 터미널 실행해서 git가 실행되는지 확인 
+
+#8. 가상환경 설정
+python -m venv .venv 
+
+#9. 새 터미널을 연다.
+(.venv) -- python 가상환경명  
+smart@smhrd MINGW64 /d/python/rehave (main) -- local repository의 head 위치 
+이런식으로 나오면 성공 
+
+#10. python 기본 package 설치 
+python -m pip install --upgrade pip
+pip install pandas numpy matplotlib jupyter
+
+#11. 프로젝트에서 필요한 package 설치 
+pip install opencv-python ultralytics streamlit selenium
+
+#12. Streamlit 앱 실행
+streamlit run main.py

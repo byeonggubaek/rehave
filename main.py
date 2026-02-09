@@ -9,7 +9,6 @@ import numpy as np
 from ultralytics import YOLO
 import streamlit as st
 from streamlit.components.v1 import html
-from cap_from_youtube import cap_from_youtube
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import random
@@ -99,21 +98,7 @@ def check(cate, angel):
         return checker[0].check_grade(angel)  # 첫 번째 객체 사용
     else:
         return "X"
-def play(url):
-    cap = cap_from_youtube(url)
-    cv2.namedWindow('YOLO Detection', cv2.WINDOW_NORMAL)  # 크기 조절 허용
-    cv2.moveWindow('YOLO Detection', 100, 100)  # x=100, y=100 위치
-
-    while cap.isOpened():
-        ret, frame = cap.read()
-        if not ret:
-            break
-        cv2.imshow('YOLO Detection', frame)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-
-    cap.release()
-    cv2.destroyAllWindows()    
+ 
 #############################################################################################################
 # 각단계의 처리 
 #############################################################################################################
